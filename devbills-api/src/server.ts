@@ -1,15 +1,19 @@
-import dotenv from "dotenv";
 import app from "./app.js";
+import { env } from "./config/env";
+import { prismaConnect } from "./config/prisma.js";
+import { initializeGlobalCategories } from "./services/globalCategories.service.js";
 
-dotenv.config();
-
-const PORT = Number(process.env.PORT);
+const PORT = env.PORT;
 
 const startServer = async () => {
   try {
+    await prismaConnect();
+
+    await initializeGlobalCategories();
+
     await app
       .listen({ port: PORT })
-      .then(() => console.log(`Server is running on port 3000`));
+      .then(() => console.log(`Servidor rodando na porta ${PORT}`));
   } catch (err) {
     console.log(err);
   }
