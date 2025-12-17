@@ -1,5 +1,6 @@
 import { CreditCard, List, TrendingUp, Wallet } from "lucide-react";
 import type { JSX } from "react";
+import { useNavigate } from "react-router";
 import Button from "../components/Button";
 
 interface Feature {
@@ -36,6 +37,8 @@ const Home = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <div className="bg-gray-950 min-h-screen">
       <div className="container-app">
@@ -44,7 +47,7 @@ const Home = () => {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Gerencie Suas Finanças com o{" "}
-                <span className="text-primary-500">Devbills</span>
+                <span className="text-primary-500">DevBills</span>
               </h1>
               <p className="text-lg text-white mb-8">
                 Uma plataforma simples e eficiente para controlar suas despesas
@@ -52,7 +55,12 @@ const Home = () => {
                 com facilidade.
               </p>
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button className="text-center px-6 py-3">Começar agora</Button>
+                <Button
+                  onClick={() => navigate("/login")}
+                  className="text-center px-6 py-3"
+                >
+                  Começar agora
+                </Button>
               </div>
             </div>
           </div>
@@ -101,7 +109,12 @@ const Home = () => {
               Comece a usar o DevBills hoje mesmo e tenha o controle total sobre
               seu dinheiro. É gratuito e fácil de usar!
             </p>
-            <Button className="mx-auto px-6 py-3">Criar Conta Gratuita</Button>
+            <Button
+              onClick={() => navigate("/login")}
+              className="mx-auto px-6 py-3"
+            >
+              Criar Conta Gratuita
+            </Button>
           </div>
         </section>
       </div>
