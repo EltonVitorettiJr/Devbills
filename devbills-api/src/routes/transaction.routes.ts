@@ -4,6 +4,7 @@ import { createTransaction } from "../controllers/transactions/createTransaction
 import { deleteTransaction } from "../controllers/transactions/deleteTransaction.controller";
 import { getSummaryTransactions } from "../controllers/transactions/getSummaryTransactions.controller";
 import { getTransactions } from "../controllers/transactions/getTransactions.controller";
+import { authMiddleware } from "../middlewares/auth.middleware";
 import {
   createTransactionSchema,
   deleteTransactionSchema,
@@ -25,6 +26,8 @@ export const transactionRoutes = async (
 
   const deleteQueryTransactionSchema = z.toJSONSchema(deleteTransactionSchema);
   delete deleteQueryTransactionSchema.$schema;
+
+  fastify.addHook("preHandler", authMiddleware);
 
   //Criação de uma transação
   fastify.route({

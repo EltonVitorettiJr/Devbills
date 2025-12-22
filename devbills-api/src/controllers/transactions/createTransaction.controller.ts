@@ -9,7 +9,7 @@ export const createTransaction = async (
   request: FastifyRequest<{ Body: CreateTransactionBody }>,
   reply: FastifyReply,
 ): Promise<void> => {
-  const userId = "asdlfasdfasdf";
+  const userId = request.userId;
 
   if (!userId) {
     return reply.status(401).send("❌Usuário não autenticado.");
