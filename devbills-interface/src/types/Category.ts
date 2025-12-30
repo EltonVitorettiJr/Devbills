@@ -4,7 +4,7 @@ export interface Category {
   id: string;
   name: string;
   color: string;
-  type: typeof TransactionType;
+  type: TransactionType;
 }
 
 export interface CategorySummary {

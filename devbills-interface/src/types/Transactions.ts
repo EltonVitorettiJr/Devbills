@@ -4,18 +4,31 @@ export const TransactionType = {
   INCOME: "income",
   EXPENSE: "expense",
 } as const;
+//define o valor do transactionType como a string "income" e "expense"
+//sem esse trecho o valor é considerado um objeto.
+export type TransactionType =
+  (typeof TransactionType)[keyof typeof TransactionType];
 
 export interface Transaction {
   id: string;
   description: string;
   categoryId: string;
-  type: typeof TransactionType;
+  type: TransactionType;
   updatedAt: string | Date;
   createdAt: string | Date;
   date: string | Date;
   amount: number;
   category: Category;
   userId: string;
+}
+
+//DTO -> Data Transfer Object
+export interface CreateTransactionDTO {
+  description: string;
+  categoryId: string;
+  type: TransactionType;
+  date: string | Date;
+  amount: number;
 }
 
 export interface TransactionFilter {
