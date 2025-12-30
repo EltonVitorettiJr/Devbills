@@ -11,7 +11,10 @@ const app: FastifyInstance = Fastify({
   },
 });
 
-app.register(cors);
+app.register(cors, {
+  origin: true,
+  methods: ["PATCH", "OPTIONS", "GET", "POST", "DELETE", "PUT"],
+});
 
 app.register(routes);
 
