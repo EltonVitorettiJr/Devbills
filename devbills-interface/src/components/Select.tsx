@@ -39,7 +39,10 @@ const Select = ({
 
       <div className="relative">
         {icon && (
-          <div className="absolute inset-y-0 top-4 left-0 pl-2 flex items-center text-gray-400">
+          <div
+            className="absolute inset-y-0 top-4 left-0 pl-2 flex
+          items-center text-gray-400"
+          >
             {icon}
           </div>
         )}
@@ -48,7 +51,8 @@ const Select = ({
       <select
         id={selectId}
         {...rest}
-        className={`block w-full bg-gray-800 py-3 pl-7 pr-4 rounded-xl text-gray-50 text-sm outline-none
+        className={`block w-full bg-gray-800 py-3 pl-7 pr-4
+          rounded-xl text-gray-50 text-sm outline-none
           appearance-none border
           ${error ? "border-red-500" : "border-gray-700"}
           ${error ? "focus:border-red-500" : "focus:border-primary-500"}
@@ -60,8 +64,14 @@ const Select = ({
           </option>
         ))}
       </select>
-      <div className="absolute inset-y-0 right-0 top-6 flex items-center pr-3">
-        <ChevronDown className="h-5 w-5 text-gray-400 absolute top-4.5 right-4" />
+      <div
+        className="absolute inset-y-0 right-0 top-6 flex
+      items-center pr-3"
+      >
+        <ChevronDown
+          className="h-5 w-5 text-gray-400
+        absolute top-4.5 right-4"
+        />
       </div>
       {error && <p className="mt-1 text-sm text-red-500">{error}</p>}
     </div>
