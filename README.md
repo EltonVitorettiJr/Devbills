@@ -7,7 +7,7 @@
 <p align="center">
   <a href="#art-sobre-o-projeto">Sobre o Projeto</a> | 
   <a href="#computer-tecnologias-usadas">Tecnologias Usadas</a> | 
-  <a href="#package-como-rodar">Como Rodar</a>
+  <a href="#package-como-rodar-o-projeto-localmente">Como Rodar</a>
 </p>
 
 <br>
@@ -90,3 +90,12 @@ Exemplo de configuração para o Back-end:
 DATABASE_URL="sua_string_de_conexao_mongodb"
 PORT=3000
 FRONT_URL="http://localhost:5173"
+```
+
+# :bug: Problemas
+
+Sinta-se à vontade para registrar problemas caso encontre bugs ou tenha sugestões de melhoria!
+
+<p align="center"> Feito com 💜 por <strong>Elton Vitoretti Jr</strong> sob tutoria do DevClub.
+
+Entre em contato: <a href="https://www.google.com/search?q=https://www.linkedin.com/in/elton-vitoretti-jr">LinkedIn</a> </p>
