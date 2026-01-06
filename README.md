@@ -40,7 +40,7 @@ O grande diferencial técnico deste projeto é o uso de **TypeScript Estrito** e
 * **Axios** (Consumo de API)
 
 ### Back-end (API)
-* **Node.js & Express** (Servidor)
+* **Node.js & Fastify** (Servidor)
 * **TypeScript** (Super-set Javascript)
 * **Prisma ORM** (Interação com Banco de Dados)
 * **MongoDB** (Banco de Dados NoSQL)
