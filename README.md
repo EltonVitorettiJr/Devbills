@@ -10,6 +10,8 @@
   <a href="#package-como-rodar-o-projeto-localmente">Como Rodar</a>
 </p>
 
+<img src="https://res.cloudinary.com/dtgimo0rh/image/upload/celular-computador-imagem_1_hzzgfh.png" alt="Imagem ilustrativa do projeto"/>
+
 <br>
 
 # :art: Sobre o Projeto
